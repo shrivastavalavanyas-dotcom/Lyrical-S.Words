@@ -67,9 +67,12 @@ section {
 }
 
 #home h1 {
-    font-size: 80px;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 100px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1;
 }
 
 #home h2 {
