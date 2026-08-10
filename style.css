@@ -63,7 +63,10 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: linear-gradient(135deg, #0b0b0f, #1b1010);
+    background:
+    radial-gradient(circle at 80% 30%, rgba(255, 68, 0, 0.18), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(255, 120, 0, 0.10), transparent 30%),
+    linear-gradient(135deg, #080808, #120b0b);
 }
 
 #home h1 {
