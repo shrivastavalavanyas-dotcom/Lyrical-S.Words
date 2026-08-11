@@ -220,17 +220,30 @@ button:hover {
 
 .member-card,
 .event-card {
-    background: #17171f;
-    padding: 30px;
-    border-radius: 10px;
+    background: rgba(23, 23, 31, 0.9);
+    padding: 25px;
+    border-radius: 15px;
     width: 280px;
     border: 1px solid #333;
+    text-align: center;
+    transition: 0.3s ease;
 }
 
 .member-card:hover,
 .event-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: #ff4d00;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+    
+ .member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 3px solid #ff4d00;
 }
 
 .member-card h3,
