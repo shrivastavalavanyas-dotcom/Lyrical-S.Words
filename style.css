@@ -76,12 +76,16 @@ background-repeat: no-repeat;
 }
 
 #home h1 {
+h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 100px;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 20px;
     line-height: 1;
+    text-align: center;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
 }
 
 #home h2 {
