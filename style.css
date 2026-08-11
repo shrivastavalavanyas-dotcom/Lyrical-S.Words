@@ -10,10 +10,13 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #0b0b0f;
+     font-family: Arial, sans-serif;
     color: white;
     line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -183,4 +186,33 @@ nav h2,
 nav a,
 button {
     font-family: 'Bebas Neue', sans-serif;
+}
+body {
+    animation: backgroundSlideshow 30s infinite;
+}
+
+@keyframes backgroundSlideshow {
+    0% {
+        background-image: url("images/club-10.jpeg");
+    }
+
+    20% {
+        background-image: url("images/club-9.jpeg");
+    }
+
+    40% {
+        background-image: url("images/club-8.jpeg");
+    }
+
+    60% {
+        background-image: url("images/club-7.jpeg");
+    }
+
+    80% {
+        background-image: url("images/club-6.jpeg");
+    }
+
+    100% {
+        background-image: url("images/club-10.jpeg");
+    }
 }
