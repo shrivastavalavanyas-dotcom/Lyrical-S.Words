@@ -257,27 +257,27 @@ footer {
 @keyframes backgroundSlideshow {
 
     0% {
-        background-image: url("images/club-10.jpeg");
+        background-image: url("images/club-10 .jpeg");
     }
 
     20% {
-        background-image: url("images/club-9.jpeg");
+        background-image: url("images/club-9 .jpeg");
     }
 
     40% {
-        background-image: url("images/club-8.jpeg");
+        background-image: url("images/club-8 .jpeg");
     }
 
     60% {
-        background-image: url("images/club-7.jpeg");
+        background-image: url("images/club-7 .jpeg");
     }
 
     80% {
-        background-image: url("images/club-6.jpeg");
+        background-image: url("images/club-6 .jpeg");
     }
 
     100% {
-        background-image: url("images/club-10.jpeg");
+        background-image: url("images/club-10 .jpeg");
     }
 }
 
