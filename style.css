@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +11,15 @@ html {
 }
 
 body {
-     font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: white;
     line-height: 1.6;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #0b0b0f;
 }
+
+/* =========================
+   HEADER / NAVIGATION
+   ========================= */
 
 header {
     background: #111118;
@@ -55,10 +57,28 @@ nav a:hover {
     color: #ff4d00;
 }
 
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+
 section {
     padding: 100px 8%;
     min-height: 70vh;
 }
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 800px;
+    color: #cccccc;
+}
+
+/* =========================
+   HOME PAGE
+   ========================= */
 
 #home {
     min-height: 90vh;
@@ -66,17 +86,36 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url("club-bg.jpeg");
+    position: relative;
+    overflow: hidden;
 
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: backgroundSlideshow 30s infinite;
 }
 
+/* Dark overlay */
+
+#home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Keep homepage text above overlay */
+
+#home > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* S.WORDS */
+
 #home h1 {
-h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 140px;
     letter-spacing: 4px;
@@ -86,21 +125,28 @@ h1 {
     text-align: center;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
-}
+
+/* Tagline */
 
 #home h2 {
-   font-size: 34px;
+    font-size: 34px;
     margin-bottom: 15px;
     letter-spacing: 1px;
     text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
 }
 
+/* Description */
+
 #home p {
-   font-size: 20px;
+    font-size: 20px;
     color: #ffffff;
     margin-bottom: 30px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
+
+/* =========================
+   BUTTON
+   ========================= */
 
 button {
     padding: 14px 32px;
@@ -116,20 +162,53 @@ button {
 }
 
 button:hover {
-     transform: scale(1.05);
+    transform: scale(1.05);
     background: #ff6a2a;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
-section h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
+/* =========================
+   ABOUT SECTION
+   ========================= */
+
+#about {
+    min-height: 100vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.65);
 }
 
-section p {
-    max-width: 800px;
-    color: #cccccc;
+#about h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 70px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
+
+#about .about-intro {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 35px;
+    color: #ffffff;
+}
+
+#about p {
+    max-width: 850px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #eeeeee;
+    margin: 0 auto 20px;
+}
+
+/* =========================
+   MEMBERS / EVENTS
+   ========================= */
 
 .member-container,
 .event-container {
@@ -160,6 +239,10 @@ section p {
     font-size: 22px;
 }
 
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
     text-align: center;
     padding: 30px;
@@ -167,43 +250,12 @@ footer {
     color: #aaa;
 }
 
-@media (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #home h1 {
-        font-size: 50px;
-    }
-
-    #home h2 {
-        font-size: 24px;
-    }
-
-    section {
-        padding: 70px 6%;
-    }
-}
-h1,
-h2,
-h3,
-nav h2,
-nav a,
-button {
-    font-family: 'Bebas Neue', sans-serif;
-}
-body {
-    animation: backgroundSlideshow 30s infinite;
-}
+/* =========================
+   BACKGROUND SLIDESHOW
+   ========================= */
 
 @keyframes backgroundSlideshow {
+
     0% {
         background-image: url("images/club-10.jpeg");
     }
@@ -228,11 +280,49 @@ body {
         background-image: url("images/club-10.jpeg");
     }
 }
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    pointer-events: none;
+
+/* =========================
+   FONT
+   ========================= */
+
+h1,
+h2,
+h3,
+nav h2,
+nav a,
+button {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h1 {
+        font-size: 70px;
+    }
+
+    #home h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+    #about h2 {
+        font-size: 50px;
+    }
 }
