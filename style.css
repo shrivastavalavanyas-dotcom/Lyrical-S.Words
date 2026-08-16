@@ -925,3 +925,191 @@ button {
     }
 
 }
+/* =========================
+   JOIN S.WORDS / CONTACT
+   ========================= */
+
+#contact {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 40%,
+            rgba(0, 140, 255, 0.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 60%,
+            rgba(255, 23, 68, 0.10),
+            transparent 35%
+        );
+}
+
+#contact .join-intro {
+    max-width: 750px;
+
+    margin: 0 auto 15px;
+
+    color: #c8cad2;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* Join cards */
+
+.join-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: 50px auto;
+}
+
+.join-card {
+    padding: 35px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 23, 35, 0.96),
+            rgba(15, 9, 18, 0.96)
+        );
+
+    border: 1px solid rgba(0, 183, 255, 0.25);
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.join-card h3 {
+    font-size: 30px;
+
+    color: #00b7ff;
+
+    margin-bottom: 15px;
+}
+
+.join-card p {
+    color: #cccccc;
+
+    line-height: 1.7;
+}
+
+.join-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff1744;
+
+    box-shadow:
+        0 0 25px rgba(255, 23, 68, 0.20);
+}
+
+
+/* Join CTA */
+
+.join-cta {
+    max-width: 700px;
+
+    margin: 20px auto 0;
+
+    padding: 45px 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(0, 100, 220, 0.16),
+            rgba(255, 20, 60, 0.13)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.join-cta h3 {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+.join-cta p {
+    color: #cccccc;
+
+    margin-bottom: 25px;
+}
+
+
+/* Join button */
+
+.join-button {
+    display: inline-block;
+
+    padding: 13px 32px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #007bff,
+            #00b7ff
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.25);
+}
+
+.join-button:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #e0003c,
+            #ff1744
+        );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(255, 23, 68, 0.35);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .join-container {
+        grid-template-columns: 1fr;
+    }
+
+    .join-card {
+        padding: 30px 22px;
+    }
+
+    .join-cta h3 {
+        font-size: 28px;
+    }
+
+}
