@@ -1113,3 +1113,130 @@ button {
     }
 
 }
+/* =========================
+   SOCIAL LINKS
+   ========================= */
+
+.social-links {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.social-links h3 {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #9da4b3;
+    margin-bottom: 25px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 150px;
+
+    padding: 13px 26px;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Instagram */
+
+.social-link.instagram:hover {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #ff1744,
+        #c90065
+    );
+
+    border-color: #ff1744;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(255, 23, 68, 0.25);
+}
+
+
+/* YouTube */
+
+.social-link.youtube:hover {
+    color: white;
+
+    background: #ff1744;
+
+    border-color: #ff1744;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(255, 23, 68, 0.25);
+}
+
+
+/* Email */
+
+.social-link.email:hover {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #007bff,
+        #00b7ff
+    );
+
+    border-color: #00b7ff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 183, 255, 0.25);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .social-container {
+        flex-direction: column;
+    }
+
+    .social-link {
+        width: 180px;
+    }
+
+}
