@@ -726,3 +726,202 @@ button {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* =========================
+   EVENTS & ACTIVITIES
+   ========================= */
+
+#events {
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(0, 140, 255, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(255, 23, 68, 0.08),
+            transparent 35%
+        );
+}
+
+.events-intro {
+    max-width: 750px;
+
+    margin-bottom: 50px;
+
+    color: #c8cad2;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* Activity grid */
+
+.activity-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+
+/* Activity card */
+
+.activity-card {
+    position: relative;
+
+    padding: 35px 30px;
+
+    min-height: 280px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 22, 34, 0.96),
+            rgba(12, 10, 18, 0.96)
+        );
+
+    border: 1px solid rgba(0, 183, 255, 0.25);
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Decorative glow */
+
+.activity-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: -60px;
+    right: -60px;
+
+    background: #008cff;
+
+    opacity: 0.10;
+
+    border-radius: 50%;
+
+    filter: blur(20px);
+
+    transition: 0.3s ease;
+}
+
+
+/* Number */
+
+.activity-number {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    color: #00b7ff;
+
+    margin-bottom: 20px;
+}
+
+
+/* Heading */
+
+.activity-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 28px;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+
+    margin-bottom: 15px;
+}
+
+
+/* Description */
+
+.activity-card p {
+    color: #c8c8d0;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* Hover */
+
+.activity-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00b7ff;
+
+    box-shadow:
+        0 0 25px rgba(0, 140, 255, 0.18),
+        0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.activity-card:hover::before {
+    background: #ff1744;
+
+    opacity: 0.16;
+
+    transform: scale(1.4);
+}
+
+
+/* Alternate red accent */
+
+.activity-card:nth-child(3n + 2) .activity-number {
+    color: #ff1744;
+}
+
+.activity-card:nth-child(3n + 2):hover {
+    border-color: #ff1744;
+
+    box-shadow:
+        0 0 25px rgba(255, 23, 68, 0.18),
+        0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .activity-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .activity-container {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        min-height: auto;
+    }
+
+}
