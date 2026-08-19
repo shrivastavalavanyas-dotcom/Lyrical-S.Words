@@ -1240,3 +1240,13 @@ button {
     }
 
 }
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
